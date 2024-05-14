@@ -12,8 +12,8 @@ import java.util.List;
 @RequiredArgsConstructor
 public class LottoService {
     private final LottoGenerator lottoGenerator;
-
-    private final static int LOTTO_PRICE=1_000;
+    private final LottoChecker lottoChecker;
+    private final static int LOTTO_PRICE = 1000; // 수정이 유리
     public Lottos generateLotto(int amount){
         List<Lotto> lottos = new ArrayList<>();
         for (int i = 0; i < amount/LOTTO_PRICE; i++) {
@@ -23,7 +23,11 @@ public class LottoService {
         return new Lottos(lottos);
     }
 
-    public Boolean checkLotto(Lotto lotto){
-        return
+    public Boolean checkLotto(Lotto lotto) {
+        return lottoChecker.check(lotto);
+    }
+
+    public Lotto getWinningNumber() {
+        return lottoChecker.getWinningNumber();
     }
 }

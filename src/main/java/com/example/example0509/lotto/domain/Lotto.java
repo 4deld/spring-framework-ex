@@ -13,7 +13,6 @@ public class Lotto {
     @Builder.Default
     private List<Integer> numbers = new ArrayList<>();
 
-    @Builder
     public Lotto(List<Integer> numbers){
         this.numbers=numbers;
     }

@@ -7,9 +7,11 @@ import java.util.List;
 
 @Component
 public class LottoChecker {
-    private static List<Integer> winningNumbers=List.of(1,2,3,4,5,6);
-
+    private static List<Integer> winningNumbers=List.of(11,34,25,16,2,1);
     public boolean check(Lotto lotto){
         return winningNumbers.equals(lotto.getNumbers());
+    }
+    public Lotto getWinningNumber(){
+        return new Lotto(winningNumbers);
     }
 }

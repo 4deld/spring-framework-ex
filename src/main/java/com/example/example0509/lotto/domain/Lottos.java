@@ -8,9 +8,10 @@ import java.util.List;
 
 @Getter @ToString
 public class Lottos {
-    private List<Lotto> lotto=new ArrayList<>();
+    private List<Lotto> lottos=new ArrayList<>();
 
     public Lottos(List<Lotto> lottos) {
+        this.lottos = lottos;
     }
 
 }
