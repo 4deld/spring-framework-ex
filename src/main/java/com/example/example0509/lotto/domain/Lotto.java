@@ -12,9 +12,11 @@ import java.util.List;
 public class Lotto {
     @Builder.Default
     private List<Integer> numbers = new ArrayList<>();
-
+    public Lotto(){
+    }
     public Lotto(List<Integer> numbers){
         this.numbers=numbers;
     }
+
 
 }
